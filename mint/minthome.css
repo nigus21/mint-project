@@ -1,0 +1,62 @@
+body {
+    background-image: linear-gradient(rgba(25, 45, 15, 0.4), #253645), url('pictures/bacground.png');
+    min-height: 100vh;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+.first-page {
+    display: flex;
+    position: relative;
+    top: 150px;
+}
+
+.imgandtexts {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 70px;
+}
+
+.mainimg {
+    display: flex;
+}
+
+
+.mainimg img {
+    position: relative;
+    bottom: -40px;
+    width: 300px;
+    height: 600px;
+    /* margin-top: 38px; */
+}
+
+.lefttxts {
+    display: flex;
+    flex-direction: column;
+    width: 45%;
+    height: fit-content;
+    gap: 30px;
+    font-size: 18px;
+    line-height: 1.5;
+    color: rgb(201, 201, 201);
+
+}
+
+.lefttxts h1 {
+    font-size: 35px;
+    text-transform: capitalize;
+}
+
+
+@media (max-width: 700px) {
+    .mainimg {
+        display: none;
+    }
+    .lefttxts{
+        width: 80%;
+    }
+}

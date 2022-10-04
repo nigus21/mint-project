@@ -1,0 +1,153 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: 'Comfortaa', cursive;
+}
+.first_page{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    position: relative;
+    top:200px;
+}
+.btn {
+    background: #1ff0ed;
+    border-radius: 4px;
+    font-family: Arial;
+    color: #292929;
+    font-size: 18px;
+    padding: 5px 10px 5px 10px;
+    text-decoration: none;
+    outline: none;
+    border: 0;
+    cursor: pointer;
+  }
+  
+  .btn:hover {
+    background: #a0ebea;
+    text-decoration: none;
+  }
+.navbar{
+    display: flex;
+    justify-content: space-between;
+    position: fixed;
+    width: 100%;
+    gap: 20px;
+    padding: 5px 60px;
+    box-shadow: 0 0 50px rgba(0,0,0,0.8);
+    background-color: #343240;
+
+    z-index: 1;
+}
+.rightnav{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.navbar ul{
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+
+}
+.navbar li{
+   list-style: none;
+
+}
+.navbar li a{
+    text-decoration: none;
+    color: rgb(201, 201, 201);
+    text-transform: capitalize;
+    transition: all .3s;
+
+}
+.navbar li a:hover{
+    color: #1ff0ed;
+    
+}
+.box {
+    width: 60px;
+    height: 60px;
+    /* border: 2px solid red; */
+    display: flex;
+    position: absolute;
+    top: 10px;
+    right: 5%;
+    /* transform: translateY(-50%); */
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+.middle {
+    display: none;
+    position: relative;
+    width: 30px;
+    height: 3px;
+    background-color: aliceblue;
+    transition: all .3s linear;
+    cursor: pointer;
+}
+
+.middle::after,
+.middle::before {
+    content: "";
+    position: absolute;
+    width: 30px;
+    height: 3px;
+    background-color: aliceblue;
+    transition: .5s;
+}
+
+.middle::before {
+    transform: translateY(-10px);
+}
+
+.middle::after {
+    transform: translateY(10px);
+}
+
+/* animation */
+
+.box.open .middle {
+    background-color: transparent;
+}
+.box.open .middle::before{
+    transform: rotate(45deg) ;
+}
+.box.open .middle::after{
+    transform: rotate(-45deg);
+}
+
+.rightnav.active{
+display: flex;
+}
+
+@media (max-width:600px){
+    .navbar{
+        flex-direction: column;
+    }
+    .rightnav{
+        display: none;
+    }
+    .navbar ul{
+        flex-direction: column;
+        justify-content: center;
+        width: 80%;
+        padding: 10px;
+    }
+    .navbar ul li{
+        /* width: 100%; */
+        text-align: center;
+        padding: 8px;
+        background-color: rgb(79, 76, 76);
+    }
+    .middle{
+        display: flex;
+    }
+}

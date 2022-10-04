@@ -1,0 +1,147 @@
+
+body {
+    display: flex;
+    gap: 50px;
+    flex-direction: column;
+    background-image: linear-gradient(rgba(32,45,85,0.6),#2e2e2e),url("pictures/background2.png");
+    background-size: cover;
+    background-attachment: fixed;
+    background-repeat: repeat-y;
+}
+
+.creatnewpost {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.creatnewpost a {
+    text-decoration: none;
+    color: rgb(255, 236, 236);
+
+}
+
+.creatnewpost h2 {
+    padding: 5px 10px;
+    border: 2px solid #000;
+    border-radius: 5px;
+    transition: .3s;
+}
+
+.creatnewpost h2:hover {
+    background-color: #000;
+    color: #fff;
+}
+
+.cards {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    display: flex;
+    flex-direction: column;
+    margin-left: 15%;
+    margin-right: 5%;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+
+.card {
+    display: flex;
+    gap: 20px;
+    min-height: 200px;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    line-height: 1.3;
+    transition: .5s;
+    width: 90%;
+    color: #fff;
+    border-top: 1px solid rgb(23, 20, 20);
+}
+.card:hover{
+    color:rgb(210, 208, 208);
+    background-color: rgb(32, 30, 30);
+}
+.card_text{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    position: relative;
+    left: 5%;
+    right: 5%;
+    line-height: 1.9;
+    width: 60%;
+}
+.card_text .title{
+    font-size: 25px;
+}
+.card_pic{
+    /* background-color: red; */
+    width: 30%;
+    display: flex;
+    justify-content: center;
+}
+.card_pic img{
+    width: 100%;
+    height: 80%;
+}
+.readmore a{
+    text-decoration: none;
+}
+.readmore{
+    transition: .6s;
+    margin-top: 20px;
+
+}
+.readmore:hover{
+    transform: scale(1.1);
+}
+.robot_img{
+    display: flex;
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    z-index: -1;
+}
+.robot_img2{
+    display: flex;
+    position: fixed;
+    transform: translateX(90deg);
+    bottom: -50px;
+
+    left: 0;
+    z-index: -1;
+    animation: robot 15s ease-in-out infinite alternate;
+}
+@keyframes robot{
+  60%,  from{
+        transform: translateY(0px);
+    }
+   to{
+        transform: translateY(400px);
+    }
+}
+.giphy{
+    position: fixed;
+    left: 50px;
+    top: 120px;
+    width:30%;
+    z-index: -1;
+}
+
+@media (max-width:1000px){
+    .robot_img , .card_pic, .robot_img2{
+        display: none;
+    }
+    .robot_img2{
+        right: 0;
+    }
+    .card_text{
+        width: 95%;
+        left: 0%;
+    }
+    .card_text .title{
+        font-size: 19px;
+    }
+}
